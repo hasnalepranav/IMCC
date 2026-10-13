@@ -18,5 +18,3 @@ class LinkedList:
     def print(self):
         print()
         print("List elements")
-
-        
