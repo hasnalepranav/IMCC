@@ -57,3 +57,5 @@ rollback;
 rollback to savepoint sp2;
 
 select * from orders;
+
+show databases;
