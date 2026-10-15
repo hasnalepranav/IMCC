@@ -18,11 +18,7 @@ class LinkedList:
             temp = temp.next
         temp.next = new_node
         new_node.next = self.head
-
     
-
-    
-
     def  print(self):
         print()
         print("List element : ")
