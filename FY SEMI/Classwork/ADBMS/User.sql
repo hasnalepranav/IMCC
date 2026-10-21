@@ -96,9 +96,13 @@ VALUES
 (5, 'Gaurav', 'Nanded', 'PowerBank', 1000);
 
 select substr(Custname,1,2),
-instr(Custname,'a') from customer;
+instr(Custname,'a') from customer; /* SUBSTR and INSTR functions*/
 
+select substr(Custname,1,2),
+instr(Custname,'a') as instring from customer;
 
+select substr(custname,1,3), instr(custname,'a')
+from customer where custid<3;
 
 
 
