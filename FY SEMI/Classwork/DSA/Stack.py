@@ -2,25 +2,25 @@
 
 class Node:
     def __init__(self,value):
-        self.data=value
-        self.next=None
+        self.data = value
+        self.next = None
 
 class stack:
     def __init__(self):
-        self.top=None
+        self.top = None
 
     def Isempty(self):
         return self.top is None
 
     def push(self, new_node):
-        new_node.next=self.top
-        self.top=new_node
+        new_node.next = self.top
+        self.top = new_node
 
     def pop(self):
         if self.Isempty():
             print("Stack is empty")
         else:
-            temp=self.top
+            temp = self.top
             print("Poped Element:", temp.data)
             self.top = self.top.next
             temp = None
@@ -30,12 +30,19 @@ class stack:
             print("Stack is empty")
         else:
             print("Stack Contains...")
-            temp=self.top
+            temp = self.top
             while temp:
                 print(temp.data)
-                temp=temp.next
+                temp = temp.next
+
+    def reverse(self):
+        temp = self.top
+        while temp:
+            st1.push(Node(temp.data))
+            temp = temp.next
 
 st = stack()
+st1 = stack()
 st.push(Node(10))
 st.push(Node(20))
 st.push(Node(30))
@@ -44,3 +51,5 @@ st.push(Node(50))
 st.print()
 st.pop()
 st.print()
+st.reverse()
+st1.print()
