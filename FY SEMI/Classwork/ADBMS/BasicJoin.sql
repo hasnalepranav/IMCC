@@ -94,8 +94,16 @@ select employees.ename, projects.pname from employees
 left join projects on employees.employee_id = projects.employee_id
 where projects.employee_id is not null;
 
+select employees.ename, projects.pname from employees
+right join projects on employees.employee_id = projects.employee_id
+where projects.employee_id is not null;
+
 /* Display employee names who has not been assigned any project*/
 
 select employees.ename, projects.pname from employees
 left join projects on employees.employee_id = projects.employee_id
+where projects.employee_id is null;
+
+select employees.ename, projects.pname from employees
+right join projects on employees.employee_id = projects.employee_id
 where projects.employee_id is null;
