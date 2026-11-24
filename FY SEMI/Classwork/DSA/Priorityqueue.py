@@ -1,11 +1,11 @@
 class node:
-    def _init_(self, value, pr):
+    def __init__(self, value, pr):
         self.data = value
         self.priority = pr
         self.next = None
 
 class PriorityQueue:
-    def _init_(self):
+    def __init__(self):
         self.front = None
         self.rear = None
 
@@ -38,8 +38,6 @@ class PriorityQueue:
             print(temp.data, end=" ")
             temp = temp.next
         print()
-
-
 
 #create priority queue 
 
