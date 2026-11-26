@@ -100,7 +100,8 @@ class BST:
                 if temp.right:
                     arr.append(temp.right)
             level+=1
-     
+        print("\nHeight of the tree", level-1)
+
     def preorder(self, rt):
         if rt is None:
             return
@@ -144,7 +145,10 @@ b1.insert(Node(500))
 print("\nInorder: ")
 b1.inorder(b1.root)
 
-print("\n\nLevel order traversal: ")
+print("\nLevel order traversal: ")
+b1.level_order(b1.root)
+
+print("\nHeight of the tree:")
 b1.level_order(b1.root)
 
 print("\n\nNo of nodes: ", b1.cnt)
