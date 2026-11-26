@@ -95,10 +95,7 @@ class BST:
                 arr.append(temp.left)
             if temp.right:
                 arr.append(temp.right)
-
-
-
-            
+     
     def preorder(self, rt):
         if rt is None:
             return
@@ -122,7 +119,7 @@ class BST:
         temp = self.root
         while temp.left:
             temp = temp.left
-        print("\nMin: ", temp.data)
+        print("\n\nMin: ", temp.data)
         temp = self.root
         while temp.right:
             temp = temp.right
@@ -142,26 +139,27 @@ b1.insert(Node(500))
 print("\nInorder: ")
 b1.inorder(b1.root)
 
-
-
-print("\n Level order traversal: ")
+print("\n\nLevel order traversal: ")
 b1.level_order(b1.root)
 
+print("\n\nNo of nodes: ", b1.cnt)
 
-print("\nNo of nodes: ", b1.cnt)
 print("\nNo of leaf nodes: ", b1.lcnt)
+
 print("\nNo of non-leaf nodes: ", b1.nlcnt)
-print("\nPreorder: ")
+
+print("\n\nPreorder: ")
 b1.preorder(b1.root)
-print("\nPostorder: ")
+
+print("\n\nPostorder: ")
 b1.postorder(b1.root)
 b1.findminmax()
 
-# b1.del_node(b1.root,100)
-# print("\n After Deletion: ", end=" ")
-# b1.inorder(b1.root)
+b1.del_node(b1.root,100)
+print("\nAfter Deletion: ", end=" ")
+b1.inorder(b1.root)
 
-# if b1.search(4500):
-#     print("\n Found the node")
-# else:
-#     print("\n Not found")
+if b1.search(4500):
+    print("\n\nFound the node")
+else:
+    print("\n\nNot found")
